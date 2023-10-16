@@ -75,7 +75,7 @@ class CMakeBuild(build_ext):
 
 setup(
     name='pqkmeans',
-    version='1.0.5',
+    version='1.0.6',
     author='Keisuke Ogaki, Yusuke Matsui',
     author_email='keisuke_ogaki@dwango.co.jp, matsui528@gmail.com',
     license='MIT License',
@@ -92,4 +92,7 @@ The library is written in C++ for the main algorithm with wrappers for Python. A
     cmdclass=dict(build_ext=CMakeBuild),
     test_suite='test',
     zip_safe=False,
+    extras_require={
+        "texmex": ["texmex-python>=1.0.0"],
+    },
 )
